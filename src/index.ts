@@ -1,4 +1,4 @@
-import { devToolsMetrics } from '@libp2p/devtools-metrics'
+import { inspectorMetrics } from '@ipshipyard/libp2p-inspector-metrics'
 import { identify } from '@libp2p/identify'
 import { peerIdFromString } from '@libp2p/peer-id'
 import { webTransport } from '@libp2p/webtransport'
@@ -174,7 +174,7 @@ const App = async () => {
   const libp2p = libp2pDefaults()
   libp2p.addresses = {}
   libp2p.peerDiscovery = [] // don't connect to the bootstrap nodes by default
-  libp2p.metrics = devToolsMetrics()
+  libp2p.metrics = inspectorMetrics()
   libp2p.services.identify = identify({
     runOnConnectionOpen: false
   })
