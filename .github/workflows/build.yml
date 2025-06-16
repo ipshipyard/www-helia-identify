@@ -64,9 +64,9 @@ jobs:
         with:
           cid: ${{ steps.deploy.outputs.cid }}
           dnslink_domain: 'identify.ipfs.network'
-          cf_record_id: ${{ secrets.CF_IPNS_NETWORK_RECORD_ID }}
-          cf_zone_id: ${{ secrets.CF_IPNS_NETWORK_ZONE_ID }}
-          cf_auth_token: ${{ secrets.CF_IPNS_NETWORK_AUTH_TOKEN }}
+          cf_record_id: ${{ secrets.CF_DNS_RECORD_ID }}
+          cf_zone_id: ${{ secrets.CF_DNS_ZONE_ID }}
+          cf_auth_token: ${{ secrets.CF_DNS_AUTH_TOKEN }}
           github_token: ${{ github.token }}
           set_github_status: true
 
